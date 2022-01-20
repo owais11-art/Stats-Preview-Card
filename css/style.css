@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 0;
+}
+.col-1{
+    width: 400px;
+    height: 350px;
+    border-radius: 10px 0 0 10px;
+    padding: 70px 20px;
+    background: hsl(244, 38%, 16%);
+}
+span{
+    color: hsl(277, 64%, 61%);
+}
+.col-2{
+    width: 400px;
+    height: 350px;
+    border-radius: 0 10px 10px 0;
+    background: url(/images/image-header-desktop.jpg) no-repeat center center / cover;
+    position: relative;
+}
+.accent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 0.7;
+}
+.col-1 .head{
+    font-family: 'Inter', sans-serif;
+    color: hsl(0, 0%, 100%);
+}
+.col-1 .head-para{
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 40px; 
+}
+.col-1 .stats{
+    display: flex;
+    justify-content:  space-around;
+    color: hsl(0, 0%, 100%);
+    margin-top: 30px;
+    font-family: 'Inter', sans-serif;
+}
+.col-1 .stats p{
+    color: hsla(0, 0%, 100%, 0.75);
+    text-transform: uppercase;
+    font-size: 8px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+/*===================================MEDIA QURIES===================================*/
+@media(max-width: 785px){
+    .container{
+        flex-direction: column-reverse;
+    }
+    .col-1{
+        width: 270px;
+        height: 530px;
+        border-radius: 0 0 10px 10px;
+    }
+    .col-2{
+        width: 270px;
+        height: 200px;
+        background: url(/images/image-header-mobile.jpg) no-repeat center center / contain;
+        border-radius:10px 10px 0 0 ;
+    }
+    .accent{
+        border-radius: 10px 10px 0 0;
+    }
+    .stats{
+        flex-direction: column;
+        align-items: center;
+    }
+    .stats div{
+        margin-bottom: 20px;
+    }
+}
